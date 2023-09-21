@@ -22,7 +22,7 @@ const espada = new Item("Espada", 180, "espada.png");
 const escudo = new Item("Escudo", 90, "escudo.png");
 
 // Array de inventario.
-const Inventario = []
+const inventario = []
 
 //Oro del juego
 let oro = 500;

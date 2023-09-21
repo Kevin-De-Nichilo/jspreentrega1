@@ -30,18 +30,30 @@ let oro = 500;
 // Elementos del DOM
 const elOro = document.querySelector("#oro span");
 elOro.innerText = oro;
+const elInventario = document.getElementById("inventario:");
 
 // Funcion de comprar.
 function comprar(itemDelJuego){
     if (oro - itemDelJuego.precio >= 0) {
         inventario.push(itemDelJuego);
         oro -= itemDelJuego.precio;
-        actualizaarHTML();
+        actualizarHTML();
     }else{
         alert(`No tenes el oro suficiente para comprar ${itemDelJuego.nombre}.`);
     }
 }
 
-function actualizaarHTML(){
+function actualizarHTML(){
+    elInventario.innertHTML = "";
+    for (const itemDelJuego of inventario){
+        const indice = inventario.indexOf(itemDelJuego);
+        const li = `
+        <li>
+            <img src="assets/${itemDelJuego.imagen}" alt="${itemDelJuego.imagen}" />
+        </li>
+        `;
+        // Concatenando los li creados en el elemento inventario.
+        elInventario.innerHTML += li;
+    }
     elOro.innerText = oro;
 }

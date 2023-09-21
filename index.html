@@ -8,20 +8,21 @@
 </head>
 <body>
     <section>
-        <h1>Hola Ricky, que queres comprar?</h1>
-        <ul>
-            <li onclick="comprar(pocion)">Pocion de vida</li>
-            <li onclick="comprar(espada)">Espada</li>
-            <li onclick="comprar(escudo)">Escudo</li>
-        </ul>
+      <h1>¡Hola! ¿Qué querés comprar?</h1>
+      <ul>
+        <li onclick="comprar(pocion)">Poción de Vida <span>100G</span></li>
+        <li onclick="comprar(espada)">Espada <span>180G</span></li>
+        <li onclick="comprar(escudo)">Escudo <span>90G</span></li>
+      </ul>
     </section>
     <section>
-        <h2>Mi inventario</h2>
+        <h2>Tu inventario:</h2>
         <ul id="inventario">
-            <!-- cargan los items del array inventario con DOM -->
+        <!-- Acá vamos a cargar los items que estén en el array
+           inventario dinámicamente con el DOM -->
         </ul>
         <h2 id="oro">
-            Oro: <span><!-- aca va el oro disponible --></span>
+        Oro: <span><!-- Acá va el oro disponible --></span>
         </h2>
     </section>
     <script src="main.js"></script>

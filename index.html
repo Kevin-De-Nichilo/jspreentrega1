@@ -9,10 +9,19 @@
     <section>
         <h1>Hola Ricky, que queres comprar?</h1>
         <ul>
-            <li onclick="">Pocion de vida</li>
-            <li onclick="">Espada</li>
-            <li onclick="">Escudo</li>
+            <li onclick="comprar(pocion)">Pocion de vida</li>
+            <li onclick="comprar(espada)">Espada</li>
+            <li onclick="comprar(escudo)">Escudo</li>
         </ul>
+    </section>
+    <section>
+        <h2>Mi inventario</h2>
+        <ul id="inventario">
+            <!-- cargan los items del array inventario con DOM -->
+        </ul>
+        <h2 id="oro">
+            Oro<span></span>
+        </h2>
     </section>
     <script src="main.js"></script>
 </body>

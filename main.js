@@ -33,7 +33,7 @@ elOro.innerText = oro;
 
 // Funcion de comprar.
 function comprar(itemDelJuego){
-    if (oro - itemDelJuego >= 0) {
+    if (oro - itemDelJuego.precio >= 0) {
         inventario.push(itemDelJuego);
         oro -= itemDelJuego.precio;
         actualizaarHTML();
